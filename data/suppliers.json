@@ -4,7 +4,7 @@
         "email": "mezba.pran@test.com",
         "brand": {
             "name": "Pran",
-            "id": "650b2fe5ea31cf54f8214ff4"
+            "id": "633177da56be8326a827b812"
         },
         "contactNumber": [
             "01111111111",
@@ -24,7 +24,7 @@
         "email": "fahim.teer@test.com",
         "brand": {
             "name": "Teer",
-            "id": "650b30b51d63008ecbaca4b2"
+            "id": "63341b10ff782a369881024b"
         },
         "contactNumber": [
             "01111111111",
@@ -44,7 +44,7 @@
         "email": "jhankar.rupchanda@test.com",
         "brand": {
             "name": "Rupchanada",
-            "id": "650b2fe5ea31cf54f8214ff3"
+            "id": "6329f4a69c503f0b7438b25e"
         },
         "contactNumber": [
             "01111111111",
@@ -64,7 +64,7 @@
         "email": "rasel.fresh@test.com",
         "brand": {
             "name": "Fresh",
-            "id": "650b2fe5ea31cf54f8214ff2"
+            "id": "6329f32f40244f2a44c85741"
         },
         "contactNumber": [
             "01111111111",
