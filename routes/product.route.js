@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const productController = require('./../controllers/product.controller');
 const uploader = require('../middlewares/uploader');
+const verifyToken = require('../middlewares/verifyToken');
+const authorization = require('../middlewares/authorization');
+
+// router.use(verifyToken);
 
 router
     .route('/file-upload')
@@ -12,7 +16,10 @@ router
 
 router
     .route('/bulk-update')
-    .patch(productController.bulkUpdateProduct);
+    .patch(
+        // authorization("admin"),
+        productController.bulkUpdateProduct
+    );
 
 router
     .route('/bulk-delete')
@@ -21,11 +28,19 @@ router
 router
     .route('/')
     .get(productController.getProducts)
-    .post(productController.createProduct);
+    .post(
+        verifyToken,
+        authorization("admin", "store-manager"),
+        productController.createProduct
+    );
 
 router
     .route('/:id')
     .patch(productController.updateProductById)
-    .delete(productController.deleteProductById);
+    .delete(
+        verifyToken,
+        authorization("admin"),
+        productController.deleteProductById
+    );
 
 module.exports = router;
